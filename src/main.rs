@@ -4,7 +4,7 @@ use std::{include_str, sync::Arc};
 // post locally, get only public
 
 struct AppState {
-    tx: broadcast::Sender<String>,
+    _tx: broadcast::Sender<String>,
 }
 
 #[tokio::main]
@@ -16,7 +16,7 @@ async fn main() {
 
     let (tx, _) = broadcast::channel(100);
 
-    let app_state = Arc::new(AppState { tx });
+    let app_state = Arc::new(AppState { _tx: tx });
 
     let app = Router::new()
         .route("/", any(root))
