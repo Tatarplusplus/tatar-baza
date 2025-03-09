@@ -21,7 +21,7 @@
             join_btn.addEventListener("click", function(e) {
                 this.disabled = true;
 
-                const websocket = new WebSocket("ws://127.0.0.1:7979/chat/websocket");
+                const websocket = new WebSocket("ws://0.0.0.0:10000/chat/websocket");
 
                 websocket.onopen = function() {
                     console.log("connection opened");
