@@ -1,5 +1,5 @@
 # Use Rust as the base image
-FROM rustlang/rust:latest
+FROM rust:1.85.0
 
 # Set the working directory inside the container
 WORKDIR /usr/src/myapp
