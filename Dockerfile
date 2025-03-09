@@ -11,7 +11,7 @@ COPY . .
 RUN cargo build --release
 
 # Expose port 7979
-EXPOSE 7979
+EXPOSE 10000
 
 # Define the command to run the application
 CMD ["./target/release/test-axum"]

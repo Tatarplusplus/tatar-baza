@@ -37,7 +37,7 @@ async fn main() {
         .fallback(fallback)
         .with_state(app_state);
 
-    let listener = TcpListener::bind("127.0.0.1:7979").await.unwrap();
+    let listener = TcpListener::bind("0.0.0.0:10000").await.unwrap();
     axum::serve(listener, app).await.unwrap();
 }
 
