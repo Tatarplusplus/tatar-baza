@@ -1,5 +1,5 @@
-# Use Rust Nightly as the base image
-FROM rustlang/rust:nightly
+# Use Rust as the base image
+FROM rustlang/rust
 
 # Set the working directory inside the container
 WORKDIR /usr/src/myapp
